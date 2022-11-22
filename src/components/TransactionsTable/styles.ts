@@ -34,5 +34,35 @@ export const Container = styled.div `
                 color: var(--red);
             }
         }
+
+        @media (max-width: 530px) {
+            th {
+                display: none;
+            }
+
+            td {
+                display: grid;
+        
+                font-size: 1.1rem;
+
+                &:first-child {
+                    margin-bottom: -1.8rem;
+                }
+
+                &.deposit {
+                    font-size: 2rem;
+                }
+
+                &.withdraw {
+                    font-size: 2rem;
+                }
+
+                &:last-child {
+                    text-align: right;
+                    margin-top: -3.5em;
+                    margin-bottom: 1em;
+                }
+            }
+        }
     }
 `
