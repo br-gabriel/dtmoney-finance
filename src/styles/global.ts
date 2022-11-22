@@ -40,6 +40,7 @@ export const GlobalStyle = createGlobalStyle`
 	body {
 		background: var(--background);
 		-webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
 	}
 
     button {
