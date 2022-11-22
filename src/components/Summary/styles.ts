@@ -34,5 +34,15 @@ export const Container = styled.div `
 
     @media (max-width: 768px) {
         overflow-x: scroll;
+        margin-right: -15px;
+        
+        ::-webkit-scrollbar {
+            height: 8px;
+            background-color: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #c0c0c0;
+            border-radius: 1rem;
+        }
     }
 `
