@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: 'https://react-finance.herokuapp.com/api',
+    baseURL: 'https://effulgent-crepe-8e024f.netlify.app',
 })
