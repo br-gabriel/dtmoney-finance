@@ -5,7 +5,7 @@
 Um projeto em React que armazena o histórico de entrada e saída de valores e calcula o saldo final. Criado para consolidar os aprendizados de React e introduzir os conceitos de Typescript.
 Os valores são armazenados momentâneamente através de uma fake api criado via MirageJS.
 
-[Link da página](https://react-finance.herokuapp.com)
+[Link da página](https://effulgent-crepe-8e024f.netlify.app)
 
 ## Tecnologias
 * React
