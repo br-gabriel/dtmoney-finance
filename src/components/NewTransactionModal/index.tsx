@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useRef, useState } from 'react';
 import Modal from 'react-modal';
 import { useTransactions } from '../../hooks/useTransactions';
 
@@ -20,6 +20,14 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
     const [amount, setAmount] = useState(0);
     const [category, setCategory] = useState('');
     const [type, setType] = useState('deposit');
+
+    const inputRef = useRef<HTMLInputElement>(null)
+
+    const handleClick = () => {
+        if (inputRef.current) {
+            inputRef.current.select();
+        }
+    };
     
     async function handleCreateNewTransaction(event: FormEvent) {
         event.preventDefault();
@@ -63,6 +71,8 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
                 placeholder='Valor'
                 value={amount}
                 onChange={event => setAmount(Number(event.target.value))}
+                onClick={handleClick}
+                ref={inputRef}
                 />
 
                 <TransactionTypeContainer>
