@@ -38,7 +38,7 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
         } else {
             localStorage.setItem('transactions', JSON.stringify(transactions));
         }
-    }, [transactions]);
+    }, []);
 
     async function createTransaction(transactionInput: TransactionInput) {
        const response = await api.post('/transactions', {
