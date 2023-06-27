@@ -36,9 +36,9 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
         if (savedData) {
             setTransactions(JSON.parse(savedData))
         } else {
-            setTransactions([]);
+            localStorage.setItem('transactions', JSON.stringify(transactions));
         }
-    }, []);
+    }, [transactions]);
 
     async function createTransaction(transactionInput: TransactionInput) {
        const response = await api.post('/transactions', {
