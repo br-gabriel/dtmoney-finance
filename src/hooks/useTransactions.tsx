@@ -35,8 +35,6 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
         const savedData = localStorage.getItem('transactions')
         if (savedData) {
             setTransactions(JSON.parse(savedData))
-        } else {
-            localStorage.setItem('transactions', JSON.stringify(transactions));
         }
     }, []);
 
