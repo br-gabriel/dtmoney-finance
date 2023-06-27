@@ -49,9 +49,9 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
            ...transactions,
            transaction,
        ]);
-    }
 
-    localStorage.setItem('transactions', JSON.stringify(transactions));
+        localStorage.setItem('transactions', JSON.stringify(transactions));
+    }
 
     return (
         <TransactionsContext.Provider value={{ transactions, createTransaction }}>
